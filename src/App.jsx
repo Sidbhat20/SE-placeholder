@@ -10,6 +10,7 @@ import './hero.css';
 import './street.css';
 import './chrome.css';
 import './responsive.css';
+import './mobile.css';
 
 const projects = [
   { id: '01', title: 'Chitradurga Substation', meta: '66 / 11 KV · 16 MVA', tone: 'sky', rotate: '-2deg', label: 'Substation / 2024' },
