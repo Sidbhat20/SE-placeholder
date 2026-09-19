@@ -1,0 +1,27 @@
+{
+  "name": "voltline-electric",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "rive:projects": "python3 rive/projects/generate.py && for kind in substation healthcare industrial residential hospitality institutional; do rive rive/projects/$kind --verify && rive rive/projects/$kind --once && cp rive/projects/$kind/build/project-$kind.riv public/ || exit 1; done",
+    "rive": "python3 rive/building/generate.py && rive rive/building --verify && rive rive/building --once && cp rive/building/build/building.riv public/building.riv"
+  },
+  "dependencies": {
+    "@rive-app/canvas": "^2.42.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "vite": "^8.3.0"
+  }
+}

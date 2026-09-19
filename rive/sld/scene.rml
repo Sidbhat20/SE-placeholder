@@ -1,0 +1,321 @@
+<Rive version="1" kind="fragment">
+    <!-- Single-line diagram: 66/11 KV incoming, isolator, two-winding
+         transformer, busbar, four outgoing feeders. Strokes itself on once,
+         then carries current continuously.
+
+         Two shared effects drive everything:
+           Reveal (0:20) - one TrimPath, on every black conductor stroke
+           Flow   (0:30) - TrimPath + DashPath, on every yellow current stroke
+         so the whole diagram animates off three keyed properties. -->
+
+    <Artboard defaultStateMachineId="0:7" styleId="0:5" width="600" height="460" name="SLD" id="0:2">
+        <LayoutComponentStyle name="Artboard Style" id="0:5"/>
+
+        <!-- The page's warm canvas, so the diagram sits on the site seamlessly
+             and the black conductors always have their contrast. -->
+        <Fill name="Background">
+            <SolidColor colorValue="FFE5E5E5" name="Color"/>
+        </Fill>
+
+        <GroupEffect name="Reveal" id="0:20">
+            <TrimPath start="0" end="0" offset="0" modeValue="synchronized" name="RevealTrim" id="0:21"/>
+        </GroupEffect>
+
+        <GroupEffect name="Flow" id="0:30">
+            <TrimPath start="0" end="0" offset="0" modeValue="synchronized" name="FlowTrim" id="0:31"/>
+            <DashPath offset="0" name="FlowDash" id="0:32">
+                <Dash length="12" name="On"/>
+                <Dash length="34" name="Off"/>
+            </DashPath>
+        </GroupEffect>
+
+        <!-- ---------- switchgear symbols (drawn on top) ---------- -->
+
+        <Shape name="Supply" id="0:50">
+            <Rectangle x="300" y="16" width="14" height="14" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Fill>
+        </Shape>
+
+        <Shape name="Isolator" id="0:51">
+            <Rectangle x="300" y="108" width="28" height="28" originX="0.5" originY="0.5" name="Path"/>
+            <Stroke thickness="3" cap="square" join="miter" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="WindingPrimary" id="0:52">
+            <Ellipse x="300" y="194" width="68" height="68" originX="0.5" originY="0.5" name="Path"/>
+            <Stroke thickness="3" cap="round" join="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" join="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="WindingSecondary" id="0:53">
+            <Ellipse x="300" y="242" width="68" height="68" originX="0.5" originY="0.5" name="Path"/>
+            <Stroke thickness="3" cap="round" join="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" join="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="FeederBreakerA" id="0:54">
+            <Rectangle x="110" y="398" width="22" height="22" originX="0.5" originY="0.5" name="Path"/>
+            <Stroke thickness="3" cap="square" join="miter" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="FeederBreakerB" id="0:55">
+            <Rectangle x="230" y="398" width="22" height="22" originX="0.5" originY="0.5" name="Path"/>
+            <Stroke thickness="3" cap="square" join="miter" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="FeederBreakerC" id="0:56">
+            <Rectangle x="370" y="398" width="22" height="22" originX="0.5" originY="0.5" name="Path"/>
+            <Stroke thickness="3" cap="square" join="miter" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="FeederBreakerD" id="0:57">
+            <Rectangle x="490" y="398" width="22" height="22" originX="0.5" originY="0.5" name="Path"/>
+            <Stroke thickness="3" cap="square" join="miter" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <!-- ---------- conductors ---------- -->
+
+        <Shape name="IncomingHT" id="0:60">
+            <PointsPath name="Path">
+                <StraightVertex x="300" y="24"/>
+                <StraightVertex x="300" y="92"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="ToTransformer" id="0:61">
+            <PointsPath name="Path">
+                <StraightVertex x="300" y="124"/>
+                <StraightVertex x="300" y="160"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="ToBusbar" id="0:62">
+            <PointsPath name="Path">
+                <StraightVertex x="300" y="276"/>
+                <StraightVertex x="300" y="322"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="Busbar" id="0:63">
+            <PointsPath name="Path">
+                <StraightVertex x="70" y="322"/>
+                <StraightVertex x="530" y="322"/>
+            </PointsPath>
+            <Stroke thickness="7" cap="square" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="7" cap="butt" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="FeederA" id="0:64">
+            <PointsPath name="Path">
+                <StraightVertex x="110" y="322"/>
+                <StraightVertex x="110" y="386"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="FeederB" id="0:65">
+            <PointsPath name="Path">
+                <StraightVertex x="230" y="322"/>
+                <StraightVertex x="230" y="386"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="FeederC" id="0:66">
+            <PointsPath name="Path">
+                <StraightVertex x="370" y="322"/>
+                <StraightVertex x="370" y="386"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="FeederD" id="0:67">
+            <PointsPath name="Path">
+                <StraightVertex x="490" y="322"/>
+                <StraightVertex x="490" y="386"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+            <Stroke thickness="3" cap="round" name="Current">
+                <SolidColor colorValue="FFFFF100" name="Color"/>
+                <TargetEffect targetId="0:30" name="Use Flow"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="TailA" id="0:68">
+            <PointsPath name="Path">
+                <StraightVertex x="110" y="410"/>
+                <StraightVertex x="110" y="436"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="TailB" id="0:69">
+            <PointsPath name="Path">
+                <StraightVertex x="230" y="410"/>
+                <StraightVertex x="230" y="436"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="TailC" id="0:70">
+            <PointsPath name="Path">
+                <StraightVertex x="370" y="410"/>
+                <StraightVertex x="370" y="436"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <Shape name="TailD" id="0:71">
+            <PointsPath name="Path">
+                <StraightVertex x="490" y="410"/>
+                <StraightVertex x="490" y="436"/>
+            </PointsPath>
+            <Stroke thickness="3" cap="round" name="Line">
+                <SolidColor colorValue="FF000000" name="Color"/>
+                <TargetEffect targetId="0:20" name="Use Reveal"/>
+            </Stroke>
+        </Shape>
+
+        <!-- ---------- animation ---------- -->
+
+        <!-- Draw: the schematic strokes itself on, once. TrimPath.end is key 115. -->
+        <LinearAnimation loopValue="oneShot" duration="80" fps="60" name="Draw" id="0:40">
+            <KeyedObject objectId="0:21">
+                <KeyedProperty propertyKey="115">
+                    <KeyFrameDouble value="0" interpolationType="cubic" frame="0"/>
+                    <KeyFrameDouble value="1" interpolationType="cubic" frame="80"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:31">
+                <KeyedProperty propertyKey="115">
+                    <KeyFrameDouble value="0" interpolationType="cubic" frame="0"/>
+                    <KeyFrameDouble value="1" interpolationType="cubic" frame="80"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+        <!-- Flow: current travels the conductors forever. DashPath.offset is key
+             690. The dash period is 12+34=46, so ending on 184 (4 periods) makes
+             the loop seamless. -->
+        <LinearAnimation loopValue="loop" duration="200" fps="60" name="Flow" id="0:41">
+            <KeyedObject objectId="0:32">
+                <KeyedProperty propertyKey="690">
+                    <KeyFrameDouble value="0" interpolationType="linear" frame="0"/>
+                    <KeyFrameDouble value="184" interpolationType="linear" frame="200"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+        <StateMachine name="State Machine 1" id="0:7">
+            <StateMachineLayer name="Draw" id="0:8">
+                <AnyState x="200" y="-120"/>
+                <ExitState x="400" y="-120"/>
+                <EntryState>
+                    <StateTransition stateToId="0:10"/>
+                </EntryState>
+                <AnimationState x="200" animationId="0:40" id="0:10"/>
+            </StateMachineLayer>
+            <StateMachineLayer name="Current" id="0:9">
+                <AnyState x="200" y="-120"/>
+                <ExitState x="400" y="-120"/>
+                <EntryState>
+                    <StateTransition stateToId="0:11"/>
+                </EntryState>
+                <AnimationState x="200" animationId="0:41" id="0:11"/>
+            </StateMachineLayer>
+        </StateMachine>
+    </Artboard>
+</Rive>

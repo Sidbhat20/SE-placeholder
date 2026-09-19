@@ -1,0 +1,84 @@
+<Rive version="1" kind="fragment">
+  <Artboard defaultStateMachineId="0:7" styleId="0:5" width="720" height="480" name="Powering the Project Wall" id="0:2">
+    <LayoutComponentStyle name="Artboard Style" id="0:5"/>
+
+    <Shape name="Paper"><Rectangle x="8" y="8" width="704" height="464" cornerRadiusTL="25" originX="0" originY="0"/><Fill><SolidColor colorValue="FFFBFAF5"/></Fill></Shape>
+
+    <!-- distribution panel -->
+    <Shape name="Panel Wash"><Rectangle x="30" y="112" width="145" height="254" cornerRadiusTL="24" originX="0" originY="0"/><Fill><SolidColor colorValue="FFE8F1FF"/></Fill></Shape>
+    <Shape name="Panel"><Rectangle x="54" y="137" width="96" height="202" cornerRadiusTL="12" originX="0" originY="0"/><Fill><SolidColor colorValue="FFFFFFFF"/></Fill><Stroke thickness="3"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+    <Shape name="Breakers"><Rectangle x="72" y="160" width="24" height="42" cornerRadiusTL="5" originX="0" originY="0"/><Rectangle x="108" y="160" width="24" height="42" cornerRadiusTL="5" originX="0" originY="0"/><Rectangle x="72" y="218" width="24" height="42" cornerRadiusTL="5" originX="0" originY="0"/><Rectangle x="108" y="218" width="24" height="42" cornerRadiusTL="5" originX="0" originY="0"/><Stroke thickness="2"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+    <Shape name="Panel Meter"><Ellipse x="102" y="298" width="26" height="26" originX="0.5" originY="0.5"/><Stroke thickness="2"><SolidColor colorValue="FF084E72"/></Stroke></Shape>
+
+    <!-- electrician: close-up hand and tester, not a generic mascot -->
+    <Node x="8" y="398" rotation="-0.48" name="Testing Hand" id="0:40">
+      <Shape x="65" y="0"><Rectangle width="134" height="48" cornerRadiusTL="24" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FFFFEBD6"/></Fill><Stroke thickness="3"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+      <Shape x="136" y="0"><Ellipse width="50" height="50" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FFFFEBD6"/></Fill><Stroke thickness="3"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+      <Shape x="175" y="0"><Rectangle width="86" height="14" cornerRadiusTL="7" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FF084E72"/></Fill><Stroke thickness="2"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+      <Shape x="220" y="0"><Rectangle width="28" height="5" cornerRadiusTL="2.5" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FF08304C"/></Fill></Shape>
+      <Shape x="190" y="0" opacity="0" name="Tester Live" id="0:41"><Ellipse width="15" height="15" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FF084E72"/></Fill></Shape>
+    </Node>
+
+    <!-- Four project memories -->
+    <Node x="262" y="92" rotation="-0.035" name="Home Card">
+      <Shape><Rectangle width="160" height="132" cornerRadiusTL="20" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FFD7FFE2"/></Fill><Stroke thickness="2"><SolidColor colorValue="2208304C"/></Stroke></Shape>
+      <Shape opacity="0" name="Home Glow" id="0:80"><Rectangle width="160" height="132" cornerRadiusTL="20" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="66FFFFFF"/></Fill></Shape>
+      <Shape y="4"><PointsPath><StraightVertex x="-38" y="5"/><StraightVertex x="0" y="-28"/><StraightVertex x="38" y="5"/><StraightVertex x="30" y="0"/><StraightVertex x="30" y="38"/><StraightVertex x="-30" y="38"/><StraightVertex x="-30" y="0"/></PointsPath><Stroke thickness="3" cap="round" join="round"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+      <Shape x="0" y="28"><Rectangle width="18" height="28" cornerRadiusTL="4" originX="0.5" originY="0.5"/><Stroke thickness="2"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+    </Node>
+
+    <Node x="528" y="92" rotation="0.028" name="Hospital Card">
+      <Shape><Rectangle width="166" height="132" cornerRadiusTL="20" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FFFFEBD6"/></Fill><Stroke thickness="2"><SolidColor colorValue="2208304C"/></Stroke></Shape>
+      <Shape opacity="0" name="Hospital Glow" id="0:81"><Rectangle width="166" height="132" cornerRadiusTL="20" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="66FFFFFF"/></Fill></Shape>
+      <Shape><Rectangle width="78" height="74" cornerRadiusTL="10" originX="0.5" originY="0.5"/><Stroke thickness="3"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+      <Shape><Rectangle width="13" height="46" cornerRadiusTL="4" originX="0.5" originY="0.5"/><Rectangle width="46" height="13" cornerRadiusTL="4" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FF08304C"/></Fill></Shape>
+    </Node>
+
+    <Node x="288" y="323" rotation="0.026" name="Factory Card">
+      <Shape><Rectangle width="182" height="136" cornerRadiusTL="20" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FFE8F1FF"/></Fill><Stroke thickness="2"><SolidColor colorValue="2208304C"/></Stroke></Shape>
+      <Shape opacity="0" name="Factory Glow" id="0:82"><Rectangle width="182" height="136" cornerRadiusTL="20" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="66FFFFFF"/></Fill></Shape>
+      <Shape y="6"><PointsPath><StraightVertex x="-52" y="34"/><StraightVertex x="-52" y="-25"/><StraightVertex x="-30" y="-25"/><StraightVertex x="-30" y="9"/><StraightVertex x="0" y="-12"/><StraightVertex x="0" y="9"/><StraightVertex x="31" y="-12"/><StraightVertex x="31" y="34"/><StraightVertex x="-52" y="34"/></PointsPath><Stroke thickness="3" cap="round" join="round"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+    </Node>
+
+    <Node x="551" y="321" rotation="-0.026" name="Substation Card">
+      <Shape><Rectangle width="182" height="140" cornerRadiusTL="20" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FFF2ECFF"/></Fill><Stroke thickness="2"><SolidColor colorValue="2208304C"/></Stroke></Shape>
+      <Shape opacity="0" name="Substation Glow" id="0:83"><Rectangle width="182" height="140" cornerRadiusTL="20" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="66FFFFFF"/></Fill></Shape>
+      <Shape y="8"><Ellipse x="-22" width="54" height="54" originX="0.5" originY="0.5"/><Ellipse x="22" width="54" height="54" originX="0.5" originY="0.5"/><Stroke thickness="3"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+      <Shape y="-39"><PointsPath><StraightVertex x="-58" y="0"/><StraightVertex x="58" y="0"/></PointsPath><Stroke thickness="5" cap="round"><SolidColor colorValue="FF08304C"/></Stroke></Shape>
+    </Node>
+
+    <!-- visible network -->
+    <Shape opacity="0.34" name="Network"><PointsPath><StraightVertex x="150" y="286"/><StraightVertex x="205" y="286"/><StraightVertex x="205" y="92"/><StraightVertex x="262" y="92"/><StraightVertex x="445" y="92"/><StraightVertex x="528" y="92"/><StraightVertex x="650" y="92"/><StraightVertex x="650" y="230"/><StraightVertex x="551" y="230"/><StraightVertex x="551" y="321"/><StraightVertex x="418" y="321"/><StraightVertex x="288" y="321"/><StraightVertex x="205" y="321"/><StraightVertex x="205" y="286"/><StraightVertex x="150" y="286"/></PointsPath><Stroke thickness="2" cap="round" join="round"><SolidColor colorValue="FF084E72"/></Stroke></Shape>
+
+    <Node x="150" y="286" name="Current" id="0:100">
+      <Shape opacity="0.12"><Ellipse width="52" height="52" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FF084E72"/></Fill></Shape>
+      <Shape opacity="0.25"><Ellipse width="30" height="30" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FF084E72"/></Fill></Shape>
+      <Shape><Ellipse width="11" height="11" originX="0.5" originY="0.5"/><Fill><SolidColor colorValue="FF08304C"/></Fill></Shape>
+    </Node>
+
+    <Node x="150" y="286" opacity="0" name="Contact Spark" id="0:110"><Shape><PointsPath><StraightVertex x="0" y="-16"/><StraightVertex x="0" y="16"/><StraightVertex x="-16" y="0"/><StraightVertex x="16" y="0"/><StraightVertex x="-11" y="-11"/><StraightVertex x="11" y="11"/><StraightVertex x="11" y="-11"/><StraightVertex x="-11" y="11"/></PointsPath><Stroke thickness="3" cap="round"><SolidColor colorValue="FF084E72"/></Stroke></Shape></Node>
+
+    <!-- Frame 0 and 480 are identical. Current pauses briefly at each memory. -->
+    <LinearAnimation loopValue="loop" duration="480" fps="60" name="Power the Memories" id="0:200">
+      <KeyedObject objectId="0:100">
+        <KeyedProperty propertyKey="13">
+          <KeyFrameDouble value="150" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="205" frame="35" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="205" frame="80" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="262" frame="105" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="262" frame="135" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="528" frame="195" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="650" frame="235" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="551" frame="290" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="551" frame="320" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="288" frame="380" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="205" frame="420" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="150" frame="480" interpolationType="linear"/>
+        </KeyedProperty>
+        <KeyedProperty propertyKey="14">
+          <KeyFrameDouble value="286" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="286" frame="35" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="92" frame="80" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="92" frame="195" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="92" frame="235" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="230" frame="270" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="321" frame="290" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="321" frame="420" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="286" frame="445" interpolationType="cubic"><CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/></KeyFrameDouble><KeyFrameDouble value="286" frame="480" interpolationType="linear"/>
+        </KeyedProperty>
+      </KeyedObject>
+
+      <KeyedObject objectId="0:40"><KeyedProperty propertyKey="15"><KeyFrameDouble value="-0.60" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.23" y1="1" x2="0.32" y2="1"/></KeyFrameDouble><KeyFrameDouble value="-0.48" frame="36" interpolationType="cubic"><CubicEaseInterpolator x1="0.77" y1="0" x2="0.175" y2="1"/></KeyFrameDouble><KeyFrameDouble value="-0.48" frame="425" interpolationType="cubic"><CubicEaseInterpolator x1="0.23" y1="1" x2="0.32" y2="1"/></KeyFrameDouble><KeyFrameDouble value="-0.60" frame="480"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:41"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0" frame="0"/><KeyFrameDouble value="1" frame="24"/><KeyFrameDouble value="1" frame="440"/><KeyFrameDouble value="0" frame="480"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:110"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0" frame="0"/><KeyFrameDouble value="1" frame="18"/><KeyFrameDouble value="0" frame="42"/><KeyFrameDouble value="0" frame="455"/><KeyFrameDouble value="1" frame="468"/><KeyFrameDouble value="0" frame="480"/></KeyedProperty></KeyedObject>
+
+      <KeyedObject objectId="0:80"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0" frame="0"/><KeyFrameDouble value="0" frame="92"/><KeyFrameDouble value="1" frame="108"/><KeyFrameDouble value="1" frame="136"/><KeyFrameDouble value="0" frame="152"/><KeyFrameDouble value="0" frame="480"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:81"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0" frame="0"/><KeyFrameDouble value="0" frame="178"/><KeyFrameDouble value="1" frame="196"/><KeyFrameDouble value="1" frame="222"/><KeyFrameDouble value="0" frame="240"/><KeyFrameDouble value="0" frame="480"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:83"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0" frame="0"/><KeyFrameDouble value="0" frame="288"/><KeyFrameDouble value="1" frame="304"/><KeyFrameDouble value="1" frame="330"/><KeyFrameDouble value="0" frame="348"/><KeyFrameDouble value="0" frame="480"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:82"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0" frame="0"/><KeyFrameDouble value="0" frame="366"/><KeyFrameDouble value="1" frame="382"/><KeyFrameDouble value="1" frame="408"/><KeyFrameDouble value="0" frame="426"/><KeyFrameDouble value="0" frame="480"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+
+    <StateMachine name="Project Wall Loop" id="0:7"><StateMachineLayer name="Current"><AnyState x="200" y="-120"/><ExitState x="400" y="-120"/><EntryState><StateTransition stateToId="0:10"/></EntryState><AnimationState x="200" animationId="0:200" id="0:10"/></StateMachineLayer></StateMachine>
+  </Artboard>
+</Rive>
