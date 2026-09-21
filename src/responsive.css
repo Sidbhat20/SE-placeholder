@@ -9,3 +9,4 @@
 
 /* New supplied lockup: natural proportions, no duplicate wordmark. */
 .floating-nav .wordmark{align-self:center;line-height:0;flex-shrink:0}.floating-nav .brand-logo{width:auto;height:34px;max-width:52px;object-fit:contain;mix-blend-mode:multiply}.floating-nav{min-height:56px;padding-top:6px;padding-bottom:6px;background:rgba(255,255,255,.97)}.floating-nav .wordmark{min-height:44px;min-width:44px;justify-content:center}@media(max-width:600px){.floating-nav .brand-logo{height:28px;max-width:42px}.floating-nav{min-height:0}.floating-nav .wordmark{margin-right:auto}}
+.power-core{position:absolute;inset:0;width:100%;height:100%}.power-core canvas,.power-core img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}.chrome-stage{min-height:470px}@media(max-width:600px){.chrome-stage{height:280px;min-height:0}}

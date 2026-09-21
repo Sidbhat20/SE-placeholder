@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import KineticMobile from './KineticMobile';
+import PowerCore from './PowerCore';
 import EnquiryAnimation from './EnquiryAnimation';
 import DetailAnimation from './DetailAnimation';
 import ServiceAnimation from './ServiceAnimation';
@@ -68,7 +68,7 @@ function Hero() {
       <p>From the first coffee to the last shift. We build the electrical systems that keep everyday life moving.</p>
       <div className="hero-actions"><RainbowButton>Plan your power system</RainbowButton><a href="#work" className="quiet-link">Explore our work <span>↗</span></a></div>
     </div>
-    <div className="chrome-stage"><KineticMobile /></div>
+    <div className="chrome-stage"><PowerCore /></div>
   </section>;
 }
 
