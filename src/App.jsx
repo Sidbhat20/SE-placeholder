@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import PowerCore from './PowerCore';
 import EnquiryAnimation from './EnquiryAnimation';
-import PanelAnimation from './PanelAnimation';
 import DetailAnimation from './DetailAnimation';
 import Loader from './Loader';
 import './loader.css';
@@ -93,7 +92,7 @@ function About() {
 }
 
 function Services() {
-  return <RevealSection className="services-section"><div className="section-heading compact"><div><span className="eyebrow">What we carry</span><h2>From first<br /><em>spark</em> to handover.</h2></div><p>One accountable line across the whole job — planning, installation, testing and the aftercare that makes it last.</p></div><div className="services-feature"><div><span className="eyebrow">Built, wired, checked</span><p>Every system is assembled with a human eye on the details — clean routes, secure terminations and a quiet handover.</p></div><PanelAnimation /></div><div className="service-list">{services.map((service, index) => <div className="service-row" key={service}><span>0{index + 1}</span><h3>{service}</h3><span className="service-spark" aria-hidden="true">↗</span></div>)}</div></RevealSection>;
+  return <RevealSection className="services-section"><div className="section-heading compact"><div><span className="eyebrow">What we carry</span><h2>From first<br /><em>spark</em> to handover.</h2></div><p>One accountable line across the whole job — planning, installation, testing and the aftercare that makes it last.</p></div><div className="service-list">{services.map((service, index) => <div className="service-row" key={service}><span>0{index + 1}</span><h3>{service}</h3><span className="service-spark" aria-hidden="true">↗</span></div>)}</div></RevealSection>;
 }
 
 function Contact() {
