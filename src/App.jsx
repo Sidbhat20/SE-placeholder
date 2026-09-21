@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import PowerCore from './PowerCore';
 import EnquiryAnimation from './EnquiryAnimation';
 import DetailAnimation from './DetailAnimation';
-import ServiceAnimation from './ServiceAnimation';
+import CommissioningRail from './CommissioningRail';
+import Loader from './Loader';
+import './loader.css';
 import './details.css';
 import ClientMarquee from './ClientMarquee';
 import ProjectStory from './ProjectStory';
@@ -91,7 +93,7 @@ function About() {
 }
 
 function Services() {
-  return <RevealSection className="services-section"><div className="section-heading compact"><div><span className="eyebrow">What we carry</span><h2>From first<br /><em>spark</em> to handover.</h2></div><p>One accountable line across the whole job — planning, installation, testing and the aftercare that makes it last.</p></div><div className="service-list">{services.map((service, index) => <div className="service-row" key={service}><span>0{index + 1}</span><h3>{service}</h3><ServiceAnimation kind={['transformer', 'breaker', 'meter', 'seal'][index]} label={service} /></div>)}</div></RevealSection>;
+  return <RevealSection className="services-section"><div className="section-heading compact"><div><span className="eyebrow">What we carry</span><h2>From first<br /><em>spark</em> to handover.</h2></div><p>One accountable line across the whole job — planning, installation, testing and the aftercare that makes it last.</p></div><CommissioningRail /><div className="service-list">{services.map((service, index) => <div className="service-row" key={service}><span>0{index + 1}</span><h3>{service}</h3><span className="service-spark" aria-hidden="true">↗</span></div>)}</div></RevealSection>;
 }
 
 function Contact() {
@@ -100,5 +102,5 @@ function Contact() {
 }
 
 export default function App() {
-  return <><Header /><main><Hero /><ClientMarquee /><Work /><About /><Services /><Contact /></main><footer><span>© {new Date().getFullYear()} Suchetana Electricals</span><span>Class I electrical contractors · Bengaluru</span><a href="#top">Back to top ↑</a></footer></>;
+  return <><Loader /><Header /><main><Hero /><ClientMarquee /><Work /><About /><Services /><Contact /></main><footer><span>© {new Date().getFullYear()} Suchetana Electricals</span><span>Class I electrical contractors · Bengaluru</span><a href="#top">Back to top ↑</a></footer></>;
 }
